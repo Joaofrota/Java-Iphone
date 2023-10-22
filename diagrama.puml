@@ -1,0 +1,28 @@
+@startuml DiagramaIphone
+package service {
+    class Telephone {
+        - attribute1: type
+        + method1(): returnType
+    }
+
+    class InternetBrowser {
+        - attribute2: type
+        + method2(parameter: type): returnType
+    }
+
+    class MusicPlayer {
+        - attribute3: type
+        + method3(): returnType
+    }
+
+    package service.impl {
+        class Iphone {
+            + realizationMethod(): returnType
+        }
+    }
+
+    Telephone --|> Iphone: realization
+    InternetBrowser --|> Iphone: realization
+    MusicPlayer --|> Iphone: realization
+}
+@enduml
